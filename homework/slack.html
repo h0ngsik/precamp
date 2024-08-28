@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="./slack.css">
+    <script src="./slack.js"></script>
+</head>
+<body>
+    <div class="메인화면">
+        <div class="header">
+            <div class="left_header">
+                <button class="left_header_icon"><img src="./img/arrow_left.png"></button>
+                <button class="left_header_icon"><img src="./img/arrow_right.png"></button>
+                <button class="left_header_icon"><img src="./img/time.png"></button>
+            </div>
+            <div class="center_right_header">
+                <div class="search_bar">
+                    <img class="help_img" src="./img/search.png" alt="">
+                    수강생을 검색해 보세요.
+                </div>
+                <div class="right_header">
+                    <div class="회원등급배지">
+                        <img class="버튼_아이콘" src="./img/logo_codecamp2.png" alt="">
+                        <div>수강생</div>
+                    </div>
+                    <button class="left_header_icon"><img src="./img/help.png" alt=""></button>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="side_bar">
+                <div class="top_side_menu">
+                    <button class="top_side_channel_icon"><img src="./img/channel.png"></button>
+                    <div class="top_side_action_icon_list">
+                        <div class="사이드_탑_영역">
+                            <button class="top_side_action_icon"><img src="./img/home.png" alt=""></button>
+                            <div>홈</div>
+                        </div>
+                        <div class="사이드_탑_영역">
+                            <button class="top_side_action_icon"><img src="./img/chat.png" alt=""></button>
+                            <div>대화</div>
+                        </div>
+                        <div class="사이드_탑_영역">
+                            <button class="top_side_action_icon"><img src="./img/notifications.png" alt=""></button>
+                            <div>알림</div>
+                        </div>
+                        <div class="사이드_탑_영역">
+                            <button class="top_side_action_icon"><img src="./img/bookmark.png" alt=""></button>
+                            <div>북마크</div>
+                        </div>
+                        <div class="사이드_탑_영역">
+                            <button class="top_side_action_icon"><img src="./img/more_meatball.png" alt=""></button>
+                            <div>더보기</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_side_menu">
+                    <button id="add_profile_button"class="top_side_action_icon"><img src="./img/add_profile.png" alt=""></button>
+                    <button class="top_side_action_icon"><img src="./img/profile.png" alt=""></button>
+                </div>
+            </div>
+            <div class="side_menu">
+                <div class="side_menu_header">
+                    코드캠프
+                    <div class="channel_title_section">
+                        <button class="channel_title_icon"><img src="./img/filter.png"></button>
+                        <button class="channel_title_icon"><img src="./img/edit.png"></button>
+                    </div>
+                </div>
+                <button class="서약서보기버튼"><img id="서약서버튼이미지" src="./img/contract_edit.png">서약서 자세히 보기</button>
+                <hr id="channel_title_hr"/>
+                <div class="side_menu_body">
+                    <div class="기수안내_영역">
+                        <div class="기수안내_박스">
+                            <img class="기수_로고_이미지" src="./img/logo_codecamp.png">
+                            <div id="기수안내_타이틀">코드캠프 13기</div>
+                        </div>
+                        <button id="수강중버튼">수강중</button>
+                    </div>
+                        <div class="가입자_영역_헤더">
+                            <div class="가입자_목록_타이틀">
+                                <img id="가입자_목록_로고" src="./img/group.png" alt="">
+                                수강생 리스트
+                            </div>
+                            <button id="목록_펴기_버튼"><img src="./img/arrow_down.png" alt=""></button>
+                        </div>
+                        <div id="가입자_목록">
+                            <div class="가입_코멘트_영역">
+                                <div class="가입_코멘트">현재 가입한 멤버가 없어요.</div>
+                                <div class="가입_코멘트">회원가입 해보세요.</div>
+                                <button class="가입하기_버튼"><img class="버튼_아이콘" src="./img/person_add.png">가입하기</button>
+                            </div>
+                        </div>
+                    <div class="채널_목록_영역"></div>
+                        <div class="가입자_영역_헤더">
+                            <div class="가입자_목록_타이틀">
+                                <img id="가입자_목록_로고" src="./img/channel_list.png" alt="">
+                                채널
+                            </div>
+                            <button id="목록_펴기_버튼"><img src="./img/arrow_down.png" alt=""></button>
+                        </div>
+                        <div>
+                            <div class="채널_목록"><img class="버튼_아이콘" src="./img/tag.png" alt="">채널 1</div>
+                            <div class="채널_목록"><img class="버튼_아이콘" src="./img/tag.png" alt="">채널 2</div>
+                            <div class="채널_목록"><img class="버튼_아이콘" src="./img/tag.png" alt="">채널 3</div>
+                            <div class="채널_목록"><img class="버튼_아이콘" src="./img/tag.png" alt="">채널 4</div>
+                        </div>
+                    <div class="차단_멤버_목록_영역">
+                        <div class="가입자_영역_헤더">
+                            <div class="가입자_목록_타이틀">
+                                <img id="가입자_목록_로고" src="./img/skull.png" alt="">
+                                차단 멤버 리스트
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_body">
+                <div class="회원가입_전체_영역">
+                    <div class="signup_title_box">
+                        <div class="signup_title">코드캠프에 가입하고</div>
+                        <div class="signup_title">개발자로 커리어 점프 하세요.</div>
+                    </div>
+                    <div class="회원가입_영역">
+                        <div class="입력영역">
+                            이름
+                            <input id="userName" class ="textfield" type="text" placeholder="이름을 입력해주세요.">
+                        </div>
+                        <div class="입력영역">
+                            이메일
+                            <input id="email" class ="textfield" type="text" placeholder="네이버, 구글, 한메일, 카카오 계정만 입력.">
+                        </div>
+                        <div class="입력영역">
+                            비밀번호
+                            <input id="password" class ="textfield" type="password" placeholder="비밀번호를 입력해주세요.">
+                        </div>
+                        <div class="입력영역">
+                            비밀번호 확인
+                            <input id="password" class ="textfield" type="password" placeholder="비밀번호를 한번 더 입력해주세요.">
+                        </div>
+                        <div class="입력영역">
+                            전화번호
+                            <input id="phoneNumber" class ="textfield" type="text" placeholder="010으로 시작, '-' 를 꼭 입력해주세요.">
+                        </div>
+                        <div class="인증_영역">
+                            <div class="인증번호_요청_영역">
+                                <div id="인증번호_텍스트">000000</div>
+                                <button class="인증번호_요청_버튼" onclick="인증번호요청하기()">인증번호 요청</button>
+                            </div>
+                            <div class="인증하기_영역">
+                                <div id="인증_타이머"></div>
+                                <button id="인증하기_버튼" disabled onclick="인증하기버튼누름()">인증하기</button>
+                            </div>
+                        </div>
+                        <div id="자기소개_영역" class="입력영역">
+                            자기소개
+                            <textarea id="자기소개_텍스트필드" class="textfield" placeholder="자기소개를 입력해 주세요."></textarea>
+                        </div>
+                        <div id="성별_영역" class="입력영역">
+                            <div class="성별_타이틀">성별</div>
+                            <div class="성별_선택_영역">
+                                <input class="selectBox" type="radio" name="gender_select" id="select_man" value="남성" onclick="getGender(event)">
+                                <label class="gender_text" for="select_man">남성</label>
+                            </div>
+                            <div class="성별_선택_영역">
+                                <input class="selectBox" type="radio" name="gender_select" id="select_woman" value="여성" onclick="getGender(event)">
+                                <label class="gender_text" for="select_woman">여성</label>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="signup_bottom">
+                            <div class="약관_동의_영역">
+                                <input type="checkbox" id="checkbox"><label class="동의_텍스트" for="checkbox">집에는 씻으러만 가는데 동의합니다.</label>
+                            </div>
+                            <button class="회원_가입하기_버튼" onclick="회원가입하기()">가입</button>
+                        </div>
+                </div>
+                </div>
+                <div class="일러스트">
+                    <img class="일러스트_이미지" src="./img/mainimg.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>다양한 데이터 저장 실습</title>
+    <script>
+        // 1. 변수 선언하기
+        //  - 변수 선언은 const, let, var 를 통해 선언할 수 있다.
+        let 이름 = "홍식"
+        console.log(이름)
+        이름 = "철수"
+        console.log(이름)
+
+        const 친구 = "영희"
+        console.log(친구)
+        // 친구 = "바보" -> 값을 변경할 수 없음.
+
+        // 2.변수의 계산
+        const 철수지갑 = 1000
+        const 영희지갑 = 5000
+        const 총합계 = 철수지갑 + 영희지갑
+        console.log("철수와 영희가 가진 돈은?" + 총합계)
+
+        const 철수지갑2 = "1000"
+        const 영희지갑2 = "5000"
+        const 총합계2 = 철수지갑2 + 영희지갑2
+        console.log(총합계2)
+
+
+        // 문자열과 숫자를 더하면 숫자를 문자열로 바꿔준다. 실수를 방지하기 위해서 자동으로 변경해줌.(오류 방지)
+        const 철수지갑3 = "1000"
+        const 영희지갑3 = 5000
+        const 총합계3 = 철수지갑3 + 영희지갑3
+        console.log(총합계3)
+
+
+        // 3. 객체 만들기(저장하기)
+        const 학생증 = {
+            이름: "홍식",
+            나이: 12,
+            학교: "다람쥐학교"
+        }
+
+        const 학생증2 = {
+            이름: "철수",
+            나이: 13,
+            학교: "곰학교"
+        }
+
+        const 학생증3 = {
+            이름: "영희",
+            나이: 14,
+            학교: "사자학교"
+        }
+        
+        console.log(학생증.이름)
+        console.log(학생증.나이)
+        console.log(학생증.학교)
+
+        console.log(학생증2)
+
+        // 4. 배열 만들기(저장하기)
+        const 사탕바구니 = ["포도맛", "딸기맛", "수박맛"]
+        const 학생증목록 = [학생증, 학생증2]
+
+        console.log(사탕바구니[0])
+        console.log(사탕바구니)
+
+        // 배열의 마지막에 요소 추가하기
+        사탕바구니.push("박하맛")
+
+        console.log(사탕바구니)
+        console.log(사탕바구니.length)
+
+        학생증목록.push(학생증3)
+        console.log(학생증목록)
+
+        console.log(학생증목록.length)
+
+        console.log(학생증목록[0])
+
+        // 배열의 요소가 너무 많은 경우, 마지막 인덱스를 모를 때 이렇게 사용할 수 있음.
+        const 마지막학생증 = 학생증목록.length - 1
+        console.log(학생증목록[마지막학생증])
+
+        // 5. 배열의 요소가 객체인 경우 객체의 속성 확인
+        console.log(학생증목록[0].이름)
+
+        // 6. 문자열도 배열의 기능을 사용할 수 있다!
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>내장 객체 실습</title>
+    <script>
+        const 수학자 = {
+            max: function() {
+                console.log("최대값을 구한다.")
+            },
+            random: function() {
+                console.log("랜덤으로 숫자를 구한다.")
+                return 5
+            },
+            round: function(반올림할값) {
+                console.log("반올림 할 대상:" + 반올림할값)
+            }
+        }
+
+        수학자.max()
+        수학자.round(1.9)
+ 
+        // random() 함수가 먼저 실행되어 return 값을 반환 받고, 그 값을 "내가만든랜덤숫자" 상수에 할당한다.
+        const 내가만든랜덤숫자 = 수학자.random()
+        console.log(내가만든랜덤숫자) // 값이 비어있는 경우, undefined로 값을 반환한다.
+
+        // 1. 수학 객체
+        // 자바스크립트에는 특정 기능을 제공하는 내장된 객체가 만들어져 있으며, 해당 객체들의 함수를 통해 기능을 사용할 수 있다.
+        Math.round()
+        Math.max()
+
+        const randomNumber = Math.random()
+        console.log(randomNumber)
+
+        // 2. 날짜 객체
+        const 오늘날짜 = new Date()
+        console.log(오늘날짜)
+
+        console.log(오늘날짜.getFullYear())
+        console.log(오늘날짜.getMonth() + 1) // Month는 1월 ~ 12월을 0 ~ 11로 결과를 반환함. + 1을 해서 데이터를 가져와야함.
+        console.log(오늘날짜.getDay()) // 월, 화, 수 ~ 와 같은 요일 데이터를 가져온다.
+
+        console.log(오늘날짜.getFullYear() + "-" + (오늘날짜.getMonth() + 1) + "-" + 오늘날짜.getDate())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

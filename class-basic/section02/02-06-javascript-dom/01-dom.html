@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>DOM 실습</title>
+    <!-- DOM(Document Object Model) 
+        HTML 문서 조작하기.
+     -->
+    <script>
+        function 이름바꾸기() {
+            // HTML 문서에서 요소의 ID를 가져오는 것
+            document.getElementById("인사말").innerText = "반가워용"
+        }
+    </script>
+</head>
+<body>
+    <!-- "안녕하세요" 를 바꾸기 위해서는 JavaScript에서 HTML의 요소를 선택해야하기 때문에, id 또는 class가 설정되어야 한다. -->
+    <div id="인사말">안녕하세요</div>
+    <button onclick="이름바꾸기()">변경</button>
+</body>
+</html>

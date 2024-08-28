@@ -1,0 +1,585 @@
+* {
+    box-sizing: border-box;
+}
+
+.메인화면 {
+    width: 1920px;
+    height: 1208px;
+
+    background-color: #491449;
+}
+
+.header {
+    width: 1920px;
+    height: 80px;
+
+    background-color: #491449;
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 16px 80px 16px 80px;
+}
+
+.left_header {
+    width: 376px;
+    height: 48px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    margin-right: 24px;
+}
+
+.left_header_icon {
+    background-color: #491449;
+    border: none;
+}
+
+.center_right_header {
+    width: 1360px;
+    height: 48px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.search_bar {
+    width: 920px;
+    height: 48px;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    padding: 8px 16px 8px 16px;
+
+    border-radius: 8px;
+
+    background-color: #955C98;
+    color: #EFE6EF;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.right_header {
+    width: 163px;
+    height: 48px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.회원등급배지 {
+    width: 118px;
+    height: 48px;
+
+    color: white;
+    font-size: 18px;
+    
+    border: 1px solid #713574;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 20px;
+}
+
+.help_img {
+    margin-right: 8px;
+}
+
+.body {
+    width: 1840px;
+    height: 1048px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.side_bar {
+    width: 80px;
+    height: 1048px;
+
+    padding: 16px 20px 0px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top_side_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.사이드_탑_영역 {
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 16px;
+}
+
+.top_side_channel_icon {
+    background-color: #491449;
+    border: none;
+
+    margin-bottom: 24px;
+}
+
+.top_side_action_icon {
+    background-color: #491449;
+    border: none;
+}
+
+.bottom_side_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#add_profile_button {
+    margin-bottom: 16px;
+}
+
+.side_menu {
+    width: 400px;
+    height: 1048px;
+
+    background-color: #713574;
+    padding: 20px;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.side_menu_header {
+    width: 360px;
+    height: 32px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.서약서보기버튼 {
+    width: 360px;
+    height: 40px;
+
+    background-color: white;
+    color: #491449;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+#channel_title_hr {
+    border: 1px solid #955C98;
+}
+
+#서약서버튼이미지 {
+    margin-right: 8px;
+}
+
+.channel_title_section {
+    display: flex;
+    flex-direction: row;
+}
+
+.channel_title_icon {
+    background-color: #713574;
+    border: none;
+}
+
+.기수안내_영역 {
+    width: 360px;
+    height: 40px;
+    margin-top: 24px;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.기수안내_박스 {
+    width: 157px;
+    height: 32px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 8px;
+}
+
+#기수안내_타이틀 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#수강중버튼 {
+    width: 66px;
+    height: 32px;
+
+    background-color: #FFFFFF33;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 8px;
+}
+
+.가입자_영역_헤더 {
+    width: 360px;
+    height: 44px;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 24px;
+}
+
+.가입자_목록_타이틀 {
+    color: white;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 16px;
+}
+
+#가입자_목록_로고 {
+    margin-right: 8px;
+}
+
+#목록_펴기_버튼 {
+    background-color: #713574;
+    border: none;
+}
+
+.가입_코멘트_영역 {
+    margin-top: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.가입_코멘트 {
+    color: #C9AAC9;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.가입자 {
+    color: #FFFFFF;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    
+    margin-top: 12px;
+    padding: 0px 16px 0px 16px;
+}
+
+.가입하기_버튼 {
+    margin-top: 12px;
+
+    width: 126px;
+    height: 40px;
+
+    background-color: #491449;
+    color: white;
+    
+    font-size: 20px;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.버튼_아이콘 {
+    margin-right: 8px;
+}
+
+.채널_목록 {
+    color: #D4D3D3;
+    
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 4px 16px 4px 16px;
+    margin-bottom: 8px;
+}
+
+.right_body {
+    width: 1360px;
+    height: 1048px;
+
+    background-color: #D5BCE4;
+    border-radius: 0px 8px 8px 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.회원가입_전체_영역 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup_title_box {
+    width: 560px;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-bottom: 40px;
+}
+
+.signup_title_box {
+    color: #491449;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.입력영역 {
+    width: 448px;
+    height: 44px;
+
+    color: #333333;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#자기소개_영역 {
+    width: 448px;
+    height: 116px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#자기소개_텍스트필드 {
+    height: 116px;
+}
+
+.textfield {
+    width: 320px;
+    height: 44px;
+    background-color: white;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    border: none;
+    border-radius: 8px;
+
+    padding-left: 8px;
+}
+
+.인증_영역 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.인증번호_요청_영역 {
+    color: #955C98;
+    font-size: 18px;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.인증번호_요청_버튼 {
+    width: 136px;
+    height: 40px;
+
+    background-color: #FFFFFF;
+    color: #491449;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    border: 1px solid #491449;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.인증번호_요청_버튼:hover {
+    background-color: #491449;
+    color: white; 
+}
+
+.인증하기_영역 {
+    color: #491449;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 12px;
+}
+
+#인증하기_버튼 {
+    width: 136px;
+    height: 40px;
+    background-color: #C7C7C7;
+    color: #F2F2F2;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 8px;
+}
+
+#성별_영역 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.selectBox {
+    width: 64px;
+    height: 24px;
+}
+
+.gender_text {
+    color: #333333;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.성별_타이틀 {
+    margin-right: 70px;
+}
+
+.성별_선택_영역 {
+    display: flex;
+    align-items: center;
+}
+
+.일러스트_이미지 {
+    box-shadow: 1px 0px 40px 0px #D389FF;
+    width: 680px;
+    height: 1048px;
+}
+
+.signup_bottom {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.약관_동의_영역 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+#checkbox {
+    width: 24px;
+    height: 24px;
+
+    background-color: #D5BCE4;
+    border: 1px solid #919191;
+}
+
+.동의_텍스트 {
+    color: #333333;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.회원_가입하기_버튼 {
+    width: 448px;
+    height: 48px;
+
+    background-color: #C7C7C7;
+    color: #F2F2F2;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.회원_가입하기_버튼:hover {
+    background-color: #491449;
+}

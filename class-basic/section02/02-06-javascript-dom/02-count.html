@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>카운트 실습</title>
+    <script>
+        function 더하기() {
+            const 숫자 = document.getElementById("카운트").innerText
+            console.log(숫자)
+            const 결과 = Number(숫자) + 1
+            console.log(결과)
+            document.getElementById("카운트").innerText = String(결과)
+        }
+
+        function 빼기() {
+            const 숫자 = document.getElementById("카운트").innerText
+            const 결과 = Number(숫자) - 1
+            console.log(결과)
+            document.getElementById("카운트").innerText = String(결과)
+        }
+    </script>
+</head>
+<body>
+    <div id="카운트">0</div>
+    <button onclick="더하기()">더하기</button>
+    <button onclick="빼기()">빼기</button>
+</body>
+</html>

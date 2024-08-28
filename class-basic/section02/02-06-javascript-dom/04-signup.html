@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>회원가입 실습</title>
+    <script>
+         function 가입자조회하기(가입자이름) {
+                alert(`가입하신분의 이름은 ${가입자이름}입니다.`)
+        }
+
+        function 회원가입() {
+            const 가입자명 = document.getElementById("이름입력").value
+
+            // document.getElementById("가입자명").innerText = 가입자명
+            document.getElementById("가입자명").innerHTML = `
+                <div onclick="가입자조회하기('${가입자명}')">${가입자명}</div>
+            `
+            // 위와 같이 HTML의 요소 자체를 변경할 수도 있다.
+        }
+    </script>
+</head>
+<body>
+    <div id="가입자명">가입자</div>
+    이름을 입력하세요: <input id= "이름입력" type="text" />
+    <button onclick="회원가입()">회원가입</button>
+
+    <!-- 문자열안에 또다른 문자열을 넣는 경우 바깥쪽은 "" 안쪽은 ''으로 감싸준다. -->
+</body>
+</html>

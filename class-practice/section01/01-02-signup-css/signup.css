@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.배경 {
+    width: 670px;
+    height: 960px;
+    border: 1px solid #AACDFF;
+    border-radius: 20px;
+
+    padding-top: 72px;
+    padding-bottom: 70px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    box-shadow: 7px 7px 39px 0px #0068FF40;
+}
+
+.제목 {
+    color: #0068FF;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.네임택 {
+    color: #797979;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+
+.입력창 {
+    width: 466px;
+    color: orange;
+    font-size: 26px;
+    
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #CFCFCF;
+
+    outline: none;
+}
+
+.입력창:focus {
+    border-bottom: 2px solid #0068FF;
+}
+
+.성별 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
+.성별선택박스 {
+    width: 140px;
+    height: 24px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#여자선택 {
+    margin-right: 5px;
+}
+
+#남자선택 {
+    margin-right: 5px;
+}
+
+.약관 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#약관동의 {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.가입버튼 {
+    background-color: white;
+    color: #0068FF;
+
+    width: 470px;
+    height: 75px;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    border: 1px solid #0068FF;
+    border-radius: 10px;
+
+    margin-top: 30px;
+}
+
+.가입버튼:hover {
+    background-color: #0068FF;
+    color: white;
+}

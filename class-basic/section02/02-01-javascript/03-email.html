@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>이메일 쪼개기 실습</title>
+    <script>
+        const email = "codecamp@gmail.com"
+
+        // 어떤 기준으로 문자열을 쪼갤래?
+        const 쪼개진결과 = email.split("@")
+
+        // split을 사용하면, 특정 값을 기준으로 문자열을 분리하고 분리된 결과는 배열로 값을 반환한다.
+        console.log(쪼개진결과)
+
+        const id = 쪼개진결과[0]
+        const domain = 쪼개진결과[1]
+        console.log(id)
+        console.log(domain)
+
+        const 짜른결과 = id.slice(0,4)
+        console.log(짜른결과)
+        const 별표 = "****"
+        
+        const 보여줄아이디 = 짜른결과 + 별표
+        console.log(보여줄아이디)
+        
+        const 최종이메일 = 보여줄아이디 + "@" + domain
+        console.log(최종이메일)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

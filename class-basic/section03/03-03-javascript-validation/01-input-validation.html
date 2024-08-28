@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>인풋 검증 실습</title>
+    <script>
+        // 인풋의 텍스트가 입력되었을 때, 동작하는 기능을 만들어보자.
+        function 인풋검증하기() {
+            console.log("무언가를 입력함.")
+
+            // 이메일 입력창에 입력된 값을 가져온다.
+            const 이메일 = document.getElementById("이메일입력창").value
+
+            // 라디오, 체크박스가 선택되었는지 확인할 수 있다.
+            const 여성선택 = document.getElementById("여성선택").checked
+            const 남성선택 = document.getElementById("남성선택").checked
+
+            const 동의하기 = document.getElementById("동의하기체크").checked
+
+            console.log(`${이메일}
+            ${여성선택}
+            ${남성선택}
+            ${동의하기}`)
+
+            const 인풋창다채웠는지 = 이메일 !== ""
+            const 성별선택했는지 = (여성선택 === true) || (남성선택 === true)
+            const 동의했는지 = 동의하기 === true
+
+            if (인풋창다채웠는지 === true && 성별선택했는지 === true && 동의했는지 === true) {
+
+                // 위 조건이 만족하는 경우, 배경색을 노란색으로 변경하고 활성화한다.
+                document.getElementById("가입버튼").style = "background-color: yellow"
+                document.getElementById("가입버튼").disabled = false
+            } else {
+                // 위 조건이 만족하지 않는 경우, 배경색은 없고, 비활성화한다.
+                document.getElementById("가입버튼").style = "background-color: none"
+                document.getElementById("가입버튼").disabled = true
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <!-- oninput을 통해, 입력되었을 때 어떤 동작(함수)을 실행할 수 있다. -->
+    이메일: <input id="이메일입력창" type="text" oninput="인풋검증하기()"/>
+    <br />
+    <input id="여성선택" type="radio" name ="gender" oninput="인풋검증하기()" />여성
+    <input id="남성선택" type="radio" name ="gender" oninput="인풋검증하기()" />남성
+    <br />
+    <input id="동의하기체크" type="checkbox" oninput="인풋검증하기()" />동의합니까?
+    <br />
+    <button id="가입버튼" disabled>회원가입</button>
+</body>
+</html>

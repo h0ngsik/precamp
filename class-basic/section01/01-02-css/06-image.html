@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>이미지 넣기</title>
+    <style>
+        .강아지배경이미지 {
+            width: 250px;
+            height: 250px;
+            background-color: red;
+            background-image: url("./00-dog.jpg");
+            background-size: contain;
+            /* 배경 사이즈
+                이미지 태그는 자식 태그를 가질 수 없다.
+                배경에 이미지를 추가하는 경우 자식 태그를 가질 수 있다.
+            */
+            /* display: flex;
+            flex-direction: column; */
+        }
+    </style>
+</head>
+<body>
+    <img src="./00-dog.jpg" width="250px"/>
+    <div class="강아지배경이미지">
+        <span>배경이미지 안에는 다른 것들을 포함할 수 있다.</span>
+        <button>버튼</button>
+    </div>
+</body>
+</html>

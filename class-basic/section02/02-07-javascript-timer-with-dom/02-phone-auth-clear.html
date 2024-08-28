@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>인증번호 실습</title>
+    <script>
+        // 2. 함수 외부에 타이머를 담을 변수를 선언하고, 인증 번호 요청이 최초 실행될 때 타이머를 클리어하는 방식.
+        let 반복작업
+        function 인증번호받기() {
+            const 랜덤숫자 = Math.random()
+            const 여섯자리숫자 = Math.floor(랜덤숫자 * 1000000)
+            const 인증번호 = String(여섯자리숫자).padStart(6, "0")
+            console.log(`인증번호는 ${인증번호} 입니다.`)
+
+            setTimeout(function() {
+                document.getElementById("인증번호").innerText = 인증번호
+            }, 1000)
+
+            타이머시작하기()
+        }
+
+        function 타이머시작하기() {
+            clearInterval(반복작업)
+            // 타이머 시간초를 계산한다.
+            let 타이머시간 = 180
+
+            // 타이머는 180초에서 1초씩 차감되어야 한다.
+            // setInterval 실행 시 1초 뒤에 내부 코드가 실행되어, 1초 지연되는 현상이 발생함.
+            반복작업 = setInterval(function() {
+                // padStart, End는 문자열에서 사용할 수 있는 함수이며,
+                // 지정한 자릿수만큼 문자가 채워지지 않으면 시작점 또는 마지막을 기준으로 어떤 문자로 채울지 지정하는 함수임.
+                const 분 = String(Math.floor(타이머시간 / 60)).padStart(2, "0")
+                const 초 = String(타이머시간 % 60).padEnd(2, "0")
+                타이머시간 = 타이머시간 - 1 
+                const 인증시간 = `${분}:${초}`
+                document.getElementById("타이머").innerText = 인증시간
+            }, 1000)
+        }
+    </script>
+</head>
+<body>
+    <div id="인증번호">000000</div>
+    <button onclick="인증번호받기()">인증번호 요청하기</button>
+    <div id="타이머">00:00</div>
+</body>
+</html>
